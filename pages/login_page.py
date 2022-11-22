@@ -5,7 +5,10 @@ from time import sleep
 
 class LoginPage(BasePage):
 
-    FEATHR_URL = 'https://login.feathr.co/'
+    def __init__(self):
+        super().__init__()
+        self.feathr_url = 'https://login.feathr.co/'
+
     EMAIL_FIELD = By.XPATH, "//div[1]/div/div/input"
     PASSWORD_FIELD = By.XPATH, "//div[2]/div/div/input"
     SIGN_IN_BUTTON = By.XPATH, "//button[contains(text(),'Sign in')]"
@@ -16,7 +19,7 @@ class LoginPage(BasePage):
     REQUEST_A_DEMO = By.XPATH, "//a[contains(text(), 'Request a demo!')]"
 
     def navigate_to_feathr(self):
-        self.goto_page(self.FEATHR_URL)
+        self.goto_page(self.feathr_url)
 
     def is_page_title_correct(self):
         return self.get_browser_title() == "Feathr"

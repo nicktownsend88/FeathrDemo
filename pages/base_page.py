@@ -6,7 +6,8 @@ from selenium.common.exceptions import TimeoutException
 
 class BasePage:
 
-    driver = webdriver.Chrome()
+    def __init__(self):
+        self.driver = webdriver.Chrome()
 
     def goto_page(self, page_url):
         self.driver.get(page_url)
