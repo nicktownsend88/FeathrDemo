@@ -1,0 +1,10 @@
+
+1. Install pip3 - https://pip.pypa.io/en/stable/installation/
+
+2. Install PyCharm - https://www.jetbrains.com/pycharm/download
+
+3. Clone Repo
+
+4. Install PyTest - Run 'pip install -U pytest' in PyCharm terminal
+
+5. Install Selenium - Run 'pip install -U selenium' in PyCharm terminal
